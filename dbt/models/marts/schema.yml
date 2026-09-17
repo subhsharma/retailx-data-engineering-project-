@@ -1,0 +1,36 @@
+version: 2
+
+models:
+
+  - name: dim_customer
+    description: "Customer dimension containing one cleaned record per customer."
+
+  - name: dim_product
+    description: "Product dimension containing cleaned product information."
+
+  - name: dim_store
+    description: "Store dimension containing store master data."
+
+  - name: dim_date
+    description: "Date dimension used for time-based analytics."
+
+  - name: fct_orders
+    description: "Order-level fact table containing customer, store, and order status information."
+
+  - name: fct_order_items
+    description: "Order-item fact table containing product quantities, prices, and calculated line totals."
+
+  - name: fct_payments
+    description: "Payment-level fact table containing payment status, method, amount, and dates."
+
+  - name: customer_360
+    description: "Customer 360 analytics table combining customer information, order activity, and successful payments."
+
+  - name: product_performance
+    description: "Product performance analytics including orders, quantity sold, and total sales."
+
+  - name: store_performance
+    description: "Store performance analytics including orders, quantities sold, and total sales."
+
+  - name: monthly_sales
+    description: "Monthly sales analytics containing order counts, completed orders, quantity sold, and sales."

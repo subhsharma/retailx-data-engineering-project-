@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: retailx_raw
+    schema: retailx.bronze
+
+    tables:
+      - name: customers
+      - name: products
+      - name: orders
+      - name: order_items
+      - name: payments
+      - name: stores

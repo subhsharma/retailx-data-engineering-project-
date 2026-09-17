@@ -1,0 +1,31 @@
+name: 'retailx_dbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'retailx_dbt'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  retailx_dbt:
+
+    staging:
+      +schema: retailx.bronze
+      +materialized: table
+
+    intermediate:
+      +schema: retailx.silver
+      +materialized: table
+
+    marts:
+      +schema: retailx.gold
+      +materialized: table
